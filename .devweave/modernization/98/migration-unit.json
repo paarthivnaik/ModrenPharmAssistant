@@ -1,0 +1,76 @@
+{
+  "id": "98",
+  "name": "Step 01 - US-SEC-01: User Login, JWT/Cookie Session & Lockout Protection",
+  "epic": "EPIC 1: Security, Identity & User Access",
+  "priority": 1,
+  "status": "BOUNDED",
+  "legacySlice": {
+    "controllers": [
+      "FYPPharmAssistant/Controllers/Account/AccountController.cs"
+    ],
+    "models": [
+      "FYPPharmAssistant/Models/Account/AccountViewModels.cs",
+      "FYPPharmAssistant/Models/Account/IdentityModels.cs"
+    ],
+    "services": [
+      "FYPPharmAssistant/App_Start/IdentityConfig.cs"
+    ],
+    "views": [
+      "FYPPharmAssistant/Views/Account/Login.cshtml"
+    ],
+    "legacyBehaviors": [
+      "Form-based POST /Account/Login with anti-forgery token",
+      "UserManager.FindByEmail and PasswordSignInAsync via OWIN cookie authentication",
+      "Email confirmation check before allowing login",
+      "5 failed attempts triggering account lockout",
+      "Role-based redirection (Staff -> SalesEntry, Admin -> ReturnUrl/Home)"
+    ]
+  },
+  "targetSlice": {
+    "backend": {
+      "domain": [
+        "PharmAPI.Domain/Entities/User.cs",
+        "PharmAPI.Domain/Entities/Role.cs"
+      ],
+      "application": [
+        "PharmAPI.Application/Features/Auth/Commands/Login/LoginCommand.cs",
+        "PharmAPI.Application/Features/Auth/Commands/Login/LoginCommandHandler.cs",
+        "PharmAPI.Application/Features/Auth/Commands/Login/LoginCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/LoginResponseDto.cs",
+        "PharmAPI.Application/Common/Interfaces/IJwtTokenService.cs",
+        "PharmAPI.Application/Common/Interfaces/IIdentityService.cs"
+      ],
+      "infrastructure": [
+        "PharmAPI.Infrastructure/Identity/IdentityService.cs",
+        "PharmAPI.Infrastructure/Identity/JwtTokenService.cs",
+        "PharmAPI.Infrastructure/Persistence/ApplicationDbContext.cs"
+      ],
+      "api": [
+        "PharmAPI.Api/Controllers/AuthController.cs"
+      ]
+    },
+    "frontend": {
+      "models": [
+        "PharmaUI/src/app/core/models/auth.models.ts"
+      ],
+      "services": [
+        "PharmaUI/src/app/core/services/auth.service.ts"
+      ],
+      "guards": [
+        "PharmaUI/src/app/core/guards/auth.guard.ts"
+      ],
+      "components": [
+        "PharmaUI/src/app/features/auth/login/login.component.ts",
+        "PharmaUI/src/app/features/auth/login/login.component.html",
+        "PharmaUI/src/app/features/auth/login/login.component.css"
+      ]
+    }
+  },
+  "acceptanceCriteria": [
+    "Valid credentials authenticate user and issue secure JWT token containing subject, email, and role claims.",
+    "5 consecutive failed login attempts trigger a 15-minute account lockout.",
+    "Invalid credentials return generic HTTP 401/400 error message without leaking user existence.",
+    "Remember Me sets persistent token retention.",
+    "Role-based routing directs authenticated users (Staff -> Sales / POS, Admin -> Dashboard)."
+  ]
+}

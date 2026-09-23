@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmAPI.Api", "PharmAPI.Api\PharmAPI.Api.csproj", "{BBE66653-3367-4A70-B4AD-2ECE414AF7D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmAPI.Application", "PharmAPI.Application\PharmAPI.Application.csproj", "{5D42C400-850C-442D-B079-C10DF4ACE38B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmAPI.Domain", "PharmAPI.Domain\PharmAPI.Domain.csproj", "{AA32DAC0-1EDA-403C-ACB6-CEE9F1729453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmAPI.Infrastructure", "PharmAPI.Infrastructure\PharmAPI.Infrastructure.csproj", "{C273C663-2D2C-4D09-83FF-3C56737F5BFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE66653-3367-4A70-B4AD-2ECE414AF7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE66653-3367-4A70-B4AD-2ECE414AF7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE66653-3367-4A70-B4AD-2ECE414AF7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE66653-3367-4A70-B4AD-2ECE414AF7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D42C400-850C-442D-B079-C10DF4ACE38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D42C400-850C-442D-B079-C10DF4ACE38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D42C400-850C-442D-B079-C10DF4ACE38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D42C400-850C-442D-B079-C10DF4ACE38B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA32DAC0-1EDA-403C-ACB6-CEE9F1729453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA32DAC0-1EDA-403C-ACB6-CEE9F1729453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA32DAC0-1EDA-403C-ACB6-CEE9F1729453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA32DAC0-1EDA-403C-ACB6-CEE9F1729453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C273C663-2D2C-4D09-83FF-3C56737F5BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C273C663-2D2C-4D09-83FF-3C56737F5BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C273C663-2D2C-4D09-83FF-3C56737F5BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C273C663-2D2C-4D09-83FF-3C56737F5BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

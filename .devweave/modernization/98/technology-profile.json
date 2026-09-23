@@ -1,0 +1,28 @@
+{
+  "id": "98",
+  "generatedAt": "2026-09-23T22:37:00Z",
+  "technologyStack": {
+    "frontend": "Angular 22.x, TypeScript, RxJS",
+    "backend": "ASP.NET Core Web API 7.0, MediatR, CQRS, C#",
+    "database": "SQLite, Entity Framework Core"
+  },
+  "practices": {
+    "architectureAndDesignPatterns": [
+      "Clean Architecture with 4 concentric layers (Domain -> Application -> Infrastructure -> Api)",
+      "CQRS pattern using MediatR IRequest<TResponse> and IRequestHandler<TRequest, TResponse>",
+      "Secure JWT Bearer authentication with token validation handlers",
+      "Angular Standalone Components with Reactive Forms and AuthService"
+    ],
+    "solidPrinciples": [
+      "Single Responsibility: Separate LoginCommand and LoginCommandHandler",
+      "Dependency Inversion: Decouple JWT creation and user persistence via IJwtTokenService and IIdentityService"
+    ],
+    "securityPractices": [
+      "5 failed login attempts trigger a 15-minute account lockout",
+      "Prevent user enumeration by returning generic 'Invalid credentials' on failed logins",
+      "Store password hashes using secure ASP.NET Core PasswordHasher / Argon2 / PBKDF2 with salt",
+      "Issue signed JWT tokens with standard claims (sub, email, roles, jti, exp)",
+      "CORS restricted to authorized origins"
+    ]
+  }
+}

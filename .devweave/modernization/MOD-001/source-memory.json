@@ -1,0 +1,16 @@
+{
+  "legacySource": {
+    "path": "D:/PharmAssistant/PharmAssistant",
+    "accessMode": "READ_ONLY",
+    "detectedSolution": "FYPPharmAssistant.sln",
+    "legacyStack": "ASP.NET MVC 5 / .NET Framework 4.5+ / ADO.NET / SQL Server",
+    "knowledgeGraphAvailable": true,
+    "knowledgeGraphPath": "D:/PharmAssistant/PharmAssistant/.devweave/graph/knowledge-graph.json"
+  },
+  "targetRepository": {
+    "path": "D:/PharmAssistant/ModrenPharmAssistant",
+    "accessMode": "READ_WRITE",
+    "detectedSolution": "PharmAPI/PharmAPI.sln",
+    "detectedFrontend": "PharmaUI"
+  }
+}

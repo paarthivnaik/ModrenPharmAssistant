@@ -1,0 +1,24 @@
+{
+  "id": "98",
+  "name": "Step 01 - US-SEC-01: User Login, JWT/Cookie Session & Lockout Protection",
+  "azureDevOps": {
+    "workItemId": 98,
+    "url": "https://dev.azure.com/balajinaik/5976a5b1-4d57-4ed1-870d-4370825e9b67/_workitems/edit/98",
+    "organization": "https://dev.azure.com/balajinaik",
+    "project": "PharmAssistant",
+    "workItemType": "User Story",
+    "priority": 1,
+    "tags": [
+      "PharmAssistant",
+      "Security",
+      "Sprint-1",
+      "Step-01"
+    ]
+  },
+  "createdAt": "2026-09-23T22:26:00Z",
+  "updatedAt": "2026-09-23T22:37:00Z",
+  "targetPath": "D:/PharmAssistant/ModrenPharmAssistant",
+  "legacySourcePath": "D:/PharmAssistant/PharmAssistant",
+  "status": "IN_PROGRESS",
+  "currentPhase": "CONTEXT"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "98",
+  "workItemTitle": "Step 01 - US-SEC-01: User Login, JWT/Cookie Session & Lockout Protection",
+  "mappings": [
+    {
+      "legacyComponent": "FYPPharmAssistant/Controllers/Account/AccountController.cs (Login POST)",
+      "targetComponent": "PharmAPI.Api/Controllers/AuthController.cs (POST /api/auth/login)",
+      "mappingType": "TRANSFORMED_TO",
+      "rationale": "Legacy MVC action transformed into RESTful Web API endpoint delegating to MediatR pipeline."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Models/Account/AccountViewModels.cs (LoginViewModel)",
+      "targetComponent": "PharmAPI.Application/Features/Auth/Commands/Login/LoginCommand.cs",
+      "mappingType": "SPLIT_INTO",
+      "targetCompanions": [
+        "PharmAPI.Application/Features/Auth/Commands/Login/LoginCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/LoginResponseDto.cs"
+      ],
+      "rationale": "Separated into CQRS Command input, FluentValidation rules, and distinct response DTO."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/App_Start/IdentityConfig.cs (ApplicationUserManager)",
+      "targetComponent": "PharmAPI.Infrastructure/Identity/IdentityService.cs",
+      "mappingType": "MIGRATED_TO",
+      "rationale": "Legacy OWIN Identity manager migrated to modern ASP.NET Core Identity service with 15-minute lockout policy."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Models/Account/IdentityModels.cs (ApplicationUser, ApplicationDbContext)",
+      "targetComponent": "PharmAPI.Domain/Entities/ApplicationUser.cs & PharmAPI.Infrastructure/Persistence/ApplicationDbContext.cs",
+      "mappingType": "SPLIT_INTO",
+      "rationale": "Domain entity placed into Domain layer; EF Core SQLite DbContext placed into Infrastructure layer."
+    },
+    {
+      "legacyComponent": "OWIN Cookie Authentication Middleware",
+      "targetComponent": "PharmAPI.Infrastructure/Identity/JwtTokenService.cs",
+      "mappingType": "REPLACED_BY",
+      "rationale": "Replaced stateful server session cookies with stateless, signed JWT bearer tokens."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Views/Account/Login.cshtml",
+      "targetComponent": "PharmaUI/src/app/features/auth/login/login.component.ts",
+      "mappingType": "REPLACED_BY",
+      "targetCompanions": [
+        "PharmaUI/src/app/features/auth/login/login.component.html",
+        "PharmaUI/src/app/features/auth/login/login.component.css",
+        "PharmaUI/src/app/core/services/auth.service.ts"
+      ],
+      "rationale": "Server-side Razor view replaced with Angular 22 Standalone component and reactive service."
+    },
+    {
+      "legacyComponent": "iCheck jQuery Plugin in Login.cshtml",
+      "targetComponent": "PharmaUI Reactive Forms FormControls",
+      "mappingType": "RETIRED",
+      "rationale": "jQuery plugins retired in favor of native Angular 22 reactive checkbox binding and CSS."
+    }
+  ]
+}

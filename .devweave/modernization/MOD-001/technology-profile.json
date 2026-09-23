@@ -1,0 +1,59 @@
+{
+  "id": "MOD-001",
+  "generatedAt": "2026-09-23T22:26:00Z",
+  "technologyStack": {
+    "frontend": "Angular 22.x, TypeScript, RxJS",
+    "backend": "ASP.NET Core Web API 7.0, MediatR, CQRS, C#",
+    "database": "SQLite, Entity Framework Core"
+  },
+  "practices": {
+    "architectureAndDesignPatterns": [
+      "Clean Architecture with 4 concentric layers (Domain -> Application -> Infrastructure -> Api)",
+      "CQRS (Command Query Responsibility Segregation) pattern utilizing MediatR requests and notifications",
+      "Repository / DbContext pattern for persistent storage isolation in Infrastructure",
+      "Angular Standalone Component architecture with inject()-based dependency injection and Signal/RxJS state flows"
+    ],
+    "solidPrinciples": [
+      "Single Responsibility: Separate Command Handlers, Query Handlers, and Validators into distinct classes",
+      "Open/Closed: Extend pipeline behaviors (logging, validation, performance) via MediatR IPipelineBehavior rather than modifying handlers",
+      "Liskov Substitution: Ensure mockable repository and domain service abstractions behave predictably",
+      "Interface Segregation: Small, focused interfaces (e.g. IApplicationDbContext, IDateTimeProvider, ICurrentUserService)",
+      "Dependency Inversion: High-level application modules depend on interfaces defined in Application/Domain, implemented in Infrastructure"
+    ],
+    "cleanCodeStandards": [
+      "Use asynchronous operations (async/await, CancellationToken) through all controller-to-database call chains",
+      "Encapsulate domain invariants inside Domain Entities / Aggregates with private setters",
+      "Avoid primitive obsession by adopting Strongly Typed IDs and Value Objects where appropriate",
+      "Keep Angular components thin, delegating business logic and API interactions to dedicated TypeScript services"
+    ],
+    "securityPractices": [
+      "Sanitize and validate all incoming inputs using FluentValidation before passing to handlers",
+      "Use parameterized queries exclusively via EF Core / SQLite to prevent SQL injection",
+      "Enforce CORS policies strictly for the Angular client origin",
+      "Protect sensitive settings using ASP.NET Core User Secrets / Environment Variables, never committed to git"
+    ],
+    "apiDesign": [
+      "RESTful resource endpoints returning appropriate HTTP status codes (200 OK, 201 Created, 204 NoContent, 400 BadRequest, 404 NotFound, 500 InternalServerError)",
+      "OpenAPI / Swagger documentation with XML docs and ProducesResponseType attributes",
+      "Uniform JSON envelope / ProblemDetails (RFC 7807) for error responses"
+    ],
+    "databasePractices": [
+      "Configure EF Core SQLite provider with foreign key constraints enabled (PRAGMA foreign_keys = ON)",
+      "Use AsNoTracking() for all read-only Query handlers to optimize memory and query throughput",
+      "Maintain code-first EF Core migrations for schema versioning and deterministic updates",
+      "Define explicit indexes on foreign keys and frequently filtered columns"
+    ],
+    "testingGuidelines": [
+      "Unit testing for Domain Entities and Application Handlers using xUnit / NUnit and Moq/NSubstitute",
+      "Integration testing for API endpoints using WebApplicationFactory and SQLite in-memory / temporary DB",
+      "Frontend component and service testing with Vitest and Angular TestBed"
+    ],
+    "antiPatternsToAvoid": [
+      "Fat controllers: Controllers must only receive requests, forward to MediatR, and return action results",
+      "Direct DbContext usage inside API controllers or Angular services",
+      "Mixing Commands and Queries within a single MediatR handler",
+      "Blocking asynchronous code with .Result or .Wait()",
+      "Subscribing inside Angular services without proper unsubscription / takeUntilDestroyed lifecycle handling"
+    ]
+  }
+}

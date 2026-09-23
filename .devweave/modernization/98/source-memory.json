@@ -1,0 +1,22 @@
+{
+  "legacySource": {
+    "path": "D:/PharmAssistant/PharmAssistant",
+    "accessMode": "READ_ONLY",
+    "detectedSolution": "FYPPharmAssistant.sln",
+    "legacyFiles": [
+      "FYPPharmAssistant/Controllers/Account/AccountController.cs",
+      "FYPPharmAssistant/Models/Account/AccountViewModels.cs",
+      "FYPPharmAssistant/Models/Account/IdentityModels.cs",
+      "FYPPharmAssistant/App_Start/IdentityConfig.cs",
+      "FYPPharmAssistant/Views/Account/Login.cshtml"
+    ],
+    "knowledgeGraphAvailable": true,
+    "knowledgeGraphPath": "D:/PharmAssistant/PharmAssistant/.devweave/graph/knowledge-graph.json"
+  },
+  "targetRepository": {
+    "path": "D:/PharmAssistant/ModrenPharmAssistant",
+    "accessMode": "READ_WRITE",
+    "targetBackend": "PharmAPI",
+    "targetFrontend": "PharmaUI"
+  }
+}
