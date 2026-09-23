@@ -1,0 +1,46 @@
+{
+  "rawIntent": "Angular, Asp.Net core Webapi with CQRS pattern, SQL Lite database",
+  "components": {
+    "frontend": {
+      "framework": "Angular",
+      "version": "22.1.0",
+      "language": "TypeScript 6.0.2",
+      "architecture": "Standalone Components & Reactive Services",
+      "stateManagement": "RxJS Observables / Angular Signals",
+      "testingFramework": "Vitest",
+      "styling": "CSS / Modular styles",
+      "sourceLocation": "PharmaUI"
+    },
+    "backend": {
+      "framework": "ASP.NET Core Web API",
+      "runtime": ".NET 7.0",
+      "language": "C#",
+      "architecturePattern": "Clean Architecture + CQRS",
+      "mediator": "MediatR 12.0.1",
+      "layers": [
+        "PharmAPI.Api (Presentation / Web API Controllers / Swagger OpenAPI)",
+        "PharmAPI.Application (CQRS Commands, Queries, Handlers, Behaviors, DTOs, Interfaces)",
+        "PharmAPI.Domain (Entities, Value Objects, Domain Exceptions, Enums)",
+        "PharmAPI.Infrastructure (Persistence, EF Core DbContext, SQLite Repositories, Identity)"
+      ],
+      "sourceLocation": "PharmAPI"
+    },
+    "database": {
+      "engine": "SQLite",
+      "orm": "Entity Framework Core (Microsoft.EntityFrameworkCore.Sqlite)",
+      "migrationStrategy": "EF Core Code-First Migrations",
+      "connection": "Data Source=pharmassistant.db"
+    },
+    "implementationPolicy": {
+      "apiDesign": "RESTful HTTP JSON endpoints with standard status codes and Swagger annotations",
+      "cqrs": "Segregation of Commands (mutations) and Queries (read-only) via MediatR",
+      "solid": "Clean Architecture concentric boundaries with inverted dependencies",
+      "cleanCode": "Asynchronous I/O, domain rule encapsulation, structured error handling"
+    }
+  },
+  "inferredDecisions": {
+    "ormProvider": "Microsoft.EntityFrameworkCore.Sqlite",
+    "validation": "FluentValidation",
+    "tokenIssuer": "HMAC-SHA256 JWT Bearer"
+  }
+}

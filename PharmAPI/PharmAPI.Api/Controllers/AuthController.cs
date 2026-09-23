@@ -2,6 +2,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PharmAPI.Application.Features.Auth.Commands.Login;
+using PharmAPI.Application.Features.Auth.Commands.Register;
 using PharmAPI.Application.Features.Auth.DTOs;
 
 namespace PharmAPI.Api.Controllers;
@@ -41,6 +42,35 @@ public class AuthController : ApiControllerBase
         catch (Exception)
         {
             return Unauthorized(new { message = "Invalid email or password." });
+        }
+    }
+
+    /// <summary>
+    /// Registers a new pharmacy staff user account.
+    /// </summary>
+    /// <param name="command">User registration details</param>
+    /// <returns>Created user summary</returns>
+    [HttpPost("register")]
+    [ProducesResponseType(typeof(RegisterResponseDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<RegisterResponseDto>> Register([FromBody] RegisterCommand command)
+    {
+        try
+        {
+            var response = await Mediator.Send(command);
+            return StatusCode(StatusCodes.Status201Created, response);
+        }
+        catch (ValidationException ex)
+        {
+            return BadRequest(new { message = "Validation failed", errors = ex.Errors.Select(e => e.ErrorMessage) });
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = "Registration failed: " + ex.Message });
         }
     }
 }

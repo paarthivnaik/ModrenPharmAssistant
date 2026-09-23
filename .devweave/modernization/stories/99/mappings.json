@@ -1,0 +1,33 @@
+{
+  "id": "99",
+  "workItemTitle": "Step 02 - US-SEC-02: User Registration & Account Provisioning",
+  "mappings": [
+    {
+      "legacyComponent": "FYPPharmAssistant/Controllers/Account/AccountController.cs (Register POST)",
+      "targetComponent": "PharmAPI.Api/Controllers/AuthController.cs (POST /api/auth/register)",
+      "mappingType": "TRANSFORMED_TO",
+      "rationale": "Legacy MVC action transformed into RESTful Web API endpoint delegating to MediatR pipeline."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Models/Account/AccountViewModels.cs (RegisterViewModel)",
+      "targetComponent": "PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommand.cs",
+      "mappingType": "SPLIT_INTO",
+      "targetCompanions": [
+        "PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/RegisterResponseDto.cs"
+      ],
+      "rationale": "Separated into CQRS Command input, FluentValidation rules, and response DTO."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Views/Account/Register.cshtml",
+      "targetComponent": "PharmaUI/src/app/features/auth/register/register.component.ts",
+      "mappingType": "REPLACED_BY",
+      "targetCompanions": [
+        "PharmaUI/src/app/features/auth/register/register.component.html",
+        "PharmaUI/src/app/features/auth/register/register.component.css",
+        "PharmaUI/src/app/core/services/auth.service.ts"
+      ],
+      "rationale": "Server-side Razor view replaced with Angular 22 Standalone component and reactive service."
+    }
+  ]
+}

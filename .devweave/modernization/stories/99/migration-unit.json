@@ -1,0 +1,60 @@
+{
+  "id": "99",
+  "name": "Step 02 - US-SEC-02: User Registration & Account Provisioning",
+  "epic": "EPIC 1: Security, Identity & User Access",
+  "priority": 2,
+  "status": "BOUNDED",
+  "legacySlice": {
+    "controllers": [
+      "FYPPharmAssistant/Controllers/Account/AccountController.cs"
+    ],
+    "models": [
+      "FYPPharmAssistant/Models/Account/AccountViewModels.cs"
+    ],
+    "views": [
+      "FYPPharmAssistant/Views/Account/Register.cshtml"
+    ],
+    "legacyBehaviors": [
+      "Form-based POST /Account/Register with anti-forgery token",
+      "UserManager.CreateAsync(user, model.Password)",
+      "Validation of Email, Password, FullName, Address, ContactNo",
+      "Duplicate email checks"
+    ]
+  },
+  "targetSlice": {
+    "backend": {
+      "application": [
+        "PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommand.cs",
+        "PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommandHandler.cs",
+        "PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/RegisterResponseDto.cs",
+        "PharmAPI.Application/Common/Interfaces/IIdentityService.cs"
+      ],
+      "infrastructure": [
+        "PharmAPI.Infrastructure/Identity/IdentityService.cs"
+      ],
+      "api": [
+        "PharmAPI.Api/Controllers/AuthController.cs"
+      ]
+    },
+    "frontend": {
+      "models": [
+        "PharmaUI/src/app/core/models/auth.models.ts"
+      ],
+      "services": [
+        "PharmaUI/src/app/core/services/auth.service.ts"
+      ],
+      "components": [
+        "PharmaUI/src/app/features/auth/register/register.component.ts",
+        "PharmaUI/src/app/features/auth/register/register.component.html",
+        "PharmaUI/src/app/features/auth/register/register.component.css"
+      ]
+    }
+  },
+  "acceptanceCriteria": [
+    "Form validates required fields: Email, Password, FullName, ContactNo, Address.",
+    "Password strength rules (minimum 8 characters, uppercase, digit, special character) are enforced.",
+    "Duplicate email registration is prevented with clear validation error.",
+    "New registered users default to 'Staff' role unless created by an Admin."
+  ]
+}

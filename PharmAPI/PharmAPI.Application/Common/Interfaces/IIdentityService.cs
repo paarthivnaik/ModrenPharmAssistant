@@ -10,6 +10,15 @@ public interface IIdentityService
         bool rememberMe,
         CancellationToken cancellationToken = default);
 
+    Task<(bool Success, string? ErrorMessage, ApplicationUser? User, IList<string>? Roles)> RegisterUserAsync(
+        string email,
+        string password,
+        string fullName,
+        string contactNo,
+        string address,
+        string role = "Staff",
+        CancellationToken cancellationToken = default);
+
     Task<ApplicationUser?> FindByEmailAsync(string email);
     Task<IList<string>> GetRolesAsync(ApplicationUser user);
 }

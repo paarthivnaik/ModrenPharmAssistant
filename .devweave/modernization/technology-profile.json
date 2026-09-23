@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-09-23T23:26:50Z",
+  "technologyStack": {
+    "frontend": "Angular 22.x, TypeScript, RxJS",
+    "backend": "ASP.NET Core Web API 7.0, MediatR, CQRS, C#",
+    "database": "SQLite, Entity Framework Core"
+  },
+  "practices": {
+    "architectureAndDesignPatterns": [
+      "Clean Architecture with 4 concentric layers (Domain -> Application -> Infrastructure -> Api)",
+      "CQRS pattern utilizing MediatR requests and notifications",
+      "Repository / DbContext isolation in Infrastructure",
+      "Angular Standalone Component architecture with inject()-based DI and Signal/RxJS state"
+    ],
+    "solidPrinciples": [
+      "Single Responsibility: Separate Command Handlers, Query Handlers, and Validators into distinct classes",
+      "Open/Closed: Extend pipeline behaviors via MediatR IPipelineBehavior",
+      "Interface Segregation: Small, focused abstractions (IIdentityService, IJwtTokenService)",
+      "Dependency Inversion: High-level application modules depend on interfaces in Application/Domain"
+    ],
+    "cleanCodeStandards": [
+      "Asynchronous I/O (async/await, CancellationToken) through all controller-to-database chains",
+      "Encapsulate domain invariants inside Domain Entities",
+      "Thin API controllers delegating directly to MediatR pipeline"
+    ],
+    "securityPractices": [
+      "Sanitize and validate inputs using FluentValidation before handlers",
+      "Automated account lockout after 5 consecutive failed attempts for 15 minutes",
+      "Generic anti-enumeration error messages on authentication failures",
+      "HMAC-SHA256 signed JWT tokens with claims and expiration"
+    ]
+  }
+}
