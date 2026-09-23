@@ -1,0 +1,11 @@
+{
+  "projectName": "PharmAssistant Modernization",
+  "createdAt": "2026-09-23T22:24:00Z",
+  "updatedAt": "2026-09-23T23:26:50Z",
+  "targetPath": "D:/PharmAssistant/ModrenPharmAssistant",
+  "legacySourcePath": "D:/PharmAssistant/PharmAssistant",
+  "pmTool": "AzureDevOps",
+  "organization": "https://dev.azure.com/balajinaik",
+  "project": "PharmAssistant",
+  "projectStatus": "INITIALIZED"
+}

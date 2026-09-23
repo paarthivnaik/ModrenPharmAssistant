@@ -11,6 +11,7 @@
     "path": "D:/PharmAssistant/ModrenPharmAssistant",
     "accessMode": "READ_WRITE",
     "detectedSolution": "PharmAPI/PharmAPI.sln",
-    "detectedFrontend": "PharmaUI"
+    "detectedFrontend": "PharmaUI",
+    "remoteUrl": "https://github.com/paarthivnaik/ModrenPharmAssistant.git"
   }
 }
