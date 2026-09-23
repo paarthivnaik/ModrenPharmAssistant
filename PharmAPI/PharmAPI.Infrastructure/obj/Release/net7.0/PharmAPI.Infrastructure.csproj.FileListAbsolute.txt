@@ -1,0 +1,17 @@
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Infrastructure.deps.json
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Infrastructure.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Infrastructure.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Application.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Domain.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Application.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\bin\Release\net7.0\PharmAPI.Domain.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.csproj.AssemblyReference.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.AssemblyInfoInputs.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.AssemblyInfo.cs
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.csproj.CoreCompileInputs.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.csproj.CopyComplete
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\refint\PharmAPI.Infrastructure.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\PharmAPI.Infrastructure.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Infrastructure\obj\Release\net7.0\ref\PharmAPI.Infrastructure.dll

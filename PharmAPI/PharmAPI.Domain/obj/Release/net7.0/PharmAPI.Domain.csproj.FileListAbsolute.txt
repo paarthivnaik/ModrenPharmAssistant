@@ -1,0 +1,12 @@
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\bin\Release\net7.0\PharmAPI.Domain.deps.json
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\bin\Release\net7.0\PharmAPI.Domain.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\bin\Release\net7.0\PharmAPI.Domain.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.csproj.AssemblyReference.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.AssemblyInfoInputs.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.AssemblyInfo.cs
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.csproj.CoreCompileInputs.cache
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\refint\PharmAPI.Domain.dll
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\PharmAPI.Domain.pdb
+D:\PharmAssistant\ModrenPharmAssistant\PharmAPI\PharmAPI.Domain\obj\Release\net7.0\ref\PharmAPI.Domain.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {}
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {}
   },
   "projects": {
-    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
+        "projectUniqueName": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
         "projectName": "PharmAPI.Domain",
-        "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
+        "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\BALAJI NAIK MUDAVATU\\.nuget\\packages\\",
-        "outputPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI.Domain\\obj\\",
+        "outputPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BALAJI NAIK MUDAVATU\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
