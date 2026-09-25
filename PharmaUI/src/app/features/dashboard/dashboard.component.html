@@ -1,0 +1,118 @@
+<!-- Content Header -->
+<section class="content-header">
+  <h1>
+    Dashboard
+    <small>Control panel & quick pharmacy overview</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a routerLink="/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Dashboard</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Info boxes -->
+  <div class="row info-boxes-row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box bg-aqua">
+        <span class="info-box-icon"><i class="fa fa-shopping-cart"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Today's Sales</span>
+          <span class="info-box-number">$1,450.00</span>
+          <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+          <span class="progress-description">70% of daily target</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box bg-green">
+        <span class="info-box-icon"><i class="fa fa-boxes-stacked"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Total In-Stock Items</span>
+          <span class="info-box-number">1,248</span>
+          <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          <span class="progress-description">Across 28 categories</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box bg-yellow">
+        <span class="info-box-icon"><i class="fa fa-triangle-exclamation"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Low Stock Alert</span>
+          <span class="info-box-number">3 Items</span>
+          <div class="progress"><div class="progress-bar" style="width: 30%"></div></div>
+          <span class="progress-description">Needs re-ordering</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box bg-red">
+        <span class="info-box-icon"><i class="fa fa-clock-rotate-left"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Expiring Soon</span>
+          <span class="info-box-number">5 Items</span>
+          <div class="progress"><div class="progress-bar" style="width: 45%"></div></div>
+          <span class="progress-description">Within next 30 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Action Cards -->
+  <div class="row">
+    <div class="col-md-8">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title"><i class="fa fa-bolt text-primary"></i> Quick Operations</h3>
+        </div>
+        <div class="box-body">
+          <div class="quick-actions-grid">
+            <a routerLink="/sales-entry" class="action-btn">
+              <i class="fa fa-cash-register"></i>
+              <span>New POS Sale</span>
+            </a>
+            <a routerLink="/purchase-entry" class="action-btn">
+              <i class="fa fa-cart-plus"></i>
+              <span>New Purchase</span>
+            </a>
+            <a routerLink="/stocks" class="action-btn">
+              <i class="fa fa-warehouse"></i>
+              <span>View Inventory</span>
+            </a>
+            <a routerLink="/reports/daily-sales" class="action-btn">
+              <i class="fa fa-chart-pie"></i>
+              <span>Daily Sales Report</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title"><i class="fa fa-user-shield text-info"></i> Session & Profile</h3>
+        </div>
+        <div class="box-body">
+          <div class="profile-summary">
+            <div class="profile-avatar"><i class="fa fa-user-doctor"></i></div>
+            <div class="profile-details">
+              <h4>{{ authService.currentUser()?.fullName || 'Pharmacy Staff' }}</h4>
+              <p class="text-muted">{{ authService.currentUser()?.email }}</p>
+              <div class="badges">
+                @for (role of authService.currentUser()?.roles; track role) {
+                  <span class="badge badge-primary">{{ role }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "generatedAt": "2026-09-25T13:33:00Z",
+  "repository": "ModrenPharmAssistant",
+  "nodes": [
+    {
+      "id": "ui:LoginComponent",
+      "type": "UI_COMPONENT",
+      "name": "LoginComponent",
+      "path": "PharmaUI/src/app/features/auth/login/login.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "ui:RegisterComponent",
+      "type": "UI_COMPONENT",
+      "name": "RegisterComponent",
+      "path": "PharmaUI/src/app/features/auth/register/register.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "ui:AuthService",
+      "type": "UI_SERVICE",
+      "name": "AuthService",
+      "path": "PharmaUI/src/app/core/services/auth.service.ts",
+      "layer": "Core (UI)"
+    },
+    {
+      "id": "ui:JwtInterceptor",
+      "type": "UI_INTERCEPTOR",
+      "name": "JwtInterceptor",
+      "path": "PharmaUI/src/app/core/interceptors/jwt.interceptor.ts",
+      "layer": "Core (UI)"
+    },
+    {
+      "id": "ui:AuthGuard",
+      "type": "UI_GUARD",
+      "name": "AuthGuard",
+      "path": "PharmaUI/src/app/core/guards/auth.guard.ts",
+      "layer": "Core (UI)"
+    },
+    {
+      "id": "api:AuthController",
+      "type": "CONTROLLER",
+      "name": "AuthController",
+      "path": "PharmAPI/PharmAPI.Api/Controllers/AuthController.cs",
+      "layer": "Presentation (API)"
+    },
+    {
+      "id": "app:LoginCommand",
+      "type": "COMMAND",
+      "name": "LoginCommand",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/Login/LoginCommand.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:LoginCommandHandler",
+      "type": "COMMAND_HANDLER",
+      "name": "LoginCommandHandler",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/Login/LoginCommandHandler.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:RegisterCommand",
+      "type": "COMMAND",
+      "name": "RegisterCommand",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommand.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:RegisterCommandHandler",
+      "type": "COMMAND_HANDLER",
+      "name": "RegisterCommandHandler",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/Register/RegisterCommandHandler.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:IIdentityService",
+      "type": "INTERFACE",
+      "name": "IIdentityService",
+      "path": "PharmAPI/PharmAPI.Application/Common/Interfaces/IIdentityService.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:IJwtTokenService",
+      "type": "INTERFACE",
+      "name": "IJwtTokenService",
+      "path": "PharmAPI/PharmAPI.Application/Common/Interfaces/IJwtTokenService.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "domain:ApplicationUser",
+      "type": "ENTITY",
+      "name": "ApplicationUser",
+      "path": "PharmAPI/PharmAPI.Domain/Entities/ApplicationUser.cs",
+      "layer": "Domain"
+    },
+    {
+      "id": "domain:ApplicationRole",
+      "type": "ENTITY",
+      "name": "ApplicationRole",
+      "path": "PharmAPI/PharmAPI.Domain/Entities/ApplicationRole.cs",
+      "layer": "Domain"
+    },
+    {
+      "id": "infra:IdentityService",
+      "type": "SERVICE",
+      "name": "IdentityService",
+      "path": "PharmAPI/PharmAPI.Infrastructure/Identity/IdentityService.cs",
+      "layer": "Infrastructure"
+    },
+    {
+      "id": "infra:JwtTokenService",
+      "type": "SERVICE",
+      "name": "JwtTokenService",
+      "path": "PharmAPI/PharmAPI.Infrastructure/Identity/JwtTokenService.cs",
+      "layer": "Infrastructure"
+    },
+    {
+      "id": "infra:ApplicationDbContext",
+      "type": "DB_CONTEXT",
+      "name": "ApplicationDbContext",
+      "path": "PharmAPI/PharmAPI.Infrastructure/Persistence/ApplicationDbContext.cs",
+      "layer": "Infrastructure"
+    },
+    {
+      "id": "ui:ForgotPasswordComponent",
+      "type": "UI_COMPONENT",
+      "name": "ForgotPasswordComponent",
+      "path": "PharmaUI/src/app/features/auth/forgot-password/forgot-password.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "ui:ResetPasswordComponent",
+      "type": "UI_COMPONENT",
+      "name": "ResetPasswordComponent",
+      "path": "PharmaUI/src/app/features/auth/reset-password/reset-password.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "ui:MainLayoutComponent",
+      "type": "UI_LAYOUT",
+      "name": "MainLayoutComponent",
+      "path": "PharmaUI/src/app/layout/main-layout/main-layout.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "ui:DashboardComponent",
+      "type": "UI_COMPONENT",
+      "name": "DashboardComponent",
+      "path": "PharmaUI/src/app/features/dashboard/dashboard.component.ts",
+      "layer": "Presentation (UI)"
+    },
+    {
+      "id": "app:ForgotPasswordCommand",
+      "type": "COMMAND",
+      "name": "ForgotPasswordCommand",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/ForgotPassword/ForgotPasswordCommand.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:ForgotPasswordCommandHandler",
+      "type": "COMMAND_HANDLER",
+      "name": "ForgotPasswordCommandHandler",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:ResetPasswordCommand",
+      "type": "COMMAND",
+      "name": "ResetPasswordCommand",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/ResetPassword/ResetPasswordCommand.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:ResetPasswordCommandHandler",
+      "type": "COMMAND_HANDLER",
+      "name": "ResetPasswordCommandHandler",
+      "path": "PharmAPI/PharmAPI.Application/Features/Auth/Commands/ResetPassword/ResetPasswordCommandHandler.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "app:IEmailService",
+      "type": "INTERFACE",
+      "name": "IEmailService",
+      "path": "PharmAPI/PharmAPI.Application/Common/Interfaces/IEmailService.cs",
+      "layer": "Application"
+    },
+    {
+      "id": "infra:EmailService",
+      "type": "SERVICE",
+      "name": "EmailService",
+      "path": "PharmAPI/PharmAPI.Infrastructure/Services/EmailService.cs",
+      "layer": "Infrastructure"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ui:LoginComponent",
+      "target": "ui:AuthService",
+      "type": "CALLS"
+    },
+    {
+      "source": "ui:RegisterComponent",
+      "target": "ui:AuthService",
+      "type": "CALLS"
+    },
+    {
+      "source": "ui:ForgotPasswordComponent",
+      "target": "ui:AuthService",
+      "type": "CALLS"
+    },
+    {
+      "source": "ui:ResetPasswordComponent",
+      "target": "ui:AuthService",
+      "type": "CALLS"
+    },
+    {
+      "source": "ui:AuthService",
+      "target": "api:AuthController",
+      "type": "ROUTES_TO"
+    },
+    {
+      "source": "api:AuthController",
+      "target": "app:LoginCommand",
+      "type": "DISPATCHES"
+    },
+    {
+      "source": "api:AuthController",
+      "target": "app:RegisterCommand",
+      "type": "DISPATCHES"
+    },
+    {
+      "source": "api:AuthController",
+      "target": "app:ForgotPasswordCommand",
+      "type": "DISPATCHES"
+    },
+    {
+      "source": "api:AuthController",
+      "target": "app:ResetPasswordCommand",
+      "type": "DISPATCHES"
+    },
+    {
+      "source": "app:LoginCommand",
+      "target": "app:LoginCommandHandler",
+      "type": "HANDLED_BY"
+    },
+    {
+      "source": "app:RegisterCommand",
+      "target": "app:RegisterCommandHandler",
+      "type": "HANDLED_BY"
+    },
+    {
+      "source": "app:ForgotPasswordCommand",
+      "target": "app:ForgotPasswordCommandHandler",
+      "type": "HANDLED_BY"
+    },
+    {
+      "source": "app:ResetPasswordCommand",
+      "target": "app:ResetPasswordCommandHandler",
+      "type": "HANDLED_BY"
+    },
+    {
+      "source": "app:ForgotPasswordCommandHandler",
+      "target": "app:IEmailService",
+      "type": "CALLS"
+    },
+    {
+      "source": "app:ForgotPasswordCommandHandler",
+      "target": "app:IIdentityService",
+      "type": "CALLS"
+    },
+    {
+      "source": "app:ResetPasswordCommandHandler",
+      "target": "app:IIdentityService",
+      "type": "CALLS"
+    },
+    {
+      "source": "infra:EmailService",
+      "target": "app:IEmailService",
+      "type": "IMPLEMENTS"
+    },
+    {
+      "source": "app:LoginCommandHandler",
+      "target": "app:IIdentityService",
+      "type": "CALLS"
+    },
+    {
+      "source": "app:LoginCommandHandler",
+      "target": "app:IJwtTokenService",
+      "type": "CALLS"
+    },
+    {
+      "source": "infra:IdentityService",
+      "target": "app:IIdentityService",
+      "type": "IMPLEMENTS"
+    },
+    {
+      "source": "infra:JwtTokenService",
+      "target": "app:IJwtTokenService",
+      "type": "IMPLEMENTS"
+    },
+    {
+      "source": "infra:IdentityService",
+      "target": "infra:ApplicationDbContext",
+      "type": "QUERIES"
+    },
+    {
+      "source": "infra:ApplicationDbContext",
+      "target": "domain:ApplicationUser",
+      "type": "MAPS"
+    },
+    {
+      "source": "infra:ApplicationDbContext",
+      "target": "domain:ApplicationRole",
+      "type": "MAPS"
+    }
+  ]
+}

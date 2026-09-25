@@ -1,0 +1,387 @@
+/* Main Wrapper & AdminLTE Skin Blue */
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  background-color: #ecf0f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   1. MAIN HEADER
+   ============================================================ */
+.main-header {
+  position: relative;
+  max-height: 50px;
+  z-index: 1030;
+  display: flex;
+}
+
+.main-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #367fa9;
+  text-decoration: none;
+  transition: width 0.3s ease-in-out;
+}
+
+.main-header .logo .logo-mini {
+  display: none;
+}
+
+.main-header .logo .logo-lg {
+  display: block;
+}
+
+.main-header .logo:hover {
+  background-color: #357ca5;
+}
+
+.main-header .navbar {
+  margin-bottom: 0;
+  margin-left: 0;
+  border: none;
+  min-height: 50px;
+  border-radius: 0;
+  background-color: #3c8dbc;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.notifications-menu {
+  position: relative;
+}
+
+.notifications-menu .dropdown-toggle {
+  color: #ffffff;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.notifications-menu .label-warning {
+  position: absolute;
+  top: 9px;
+  right: 2px;
+  text-align: center;
+  font-size: 9px;
+  padding: 2px 5px;
+  line-height: .9;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1000;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu .header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #ffffff;
+  padding: 7px 10px;
+  border-bottom: 1px solid #f4f4f4;
+  color: #444444;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dropdown-menu .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dropdown-menu .menu li a {
+  display: block;
+  white-space: nowrap;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 10px;
+  color: #444444;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.dropdown-menu .menu li a:hover {
+  background-color: #f4f4f4;
+}
+
+.dropdown-menu .footer {
+  text-align: center;
+  padding: 7px 10px;
+  border-top: 1px solid #eeeeee;
+}
+
+.dropdown-menu .footer a {
+  color: #3c8dbc;
+  font-size: 12px;
+}
+
+.text-yellow {
+  color: #f39c12;
+  margin-right: 5px;
+}
+
+.user-greeting {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.btn-logout {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fecaca;
+}
+
+/* ============================================================
+   2. MAIN SIDEBAR
+   ============================================================ */
+.main-sidebar {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  min-height: calc(100vh - 50px);
+  width: 230px;
+  z-index: 810;
+  background-color: #222d32;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.user-panel {
+  position: relative;
+  width: 100%;
+  padding: 15px 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a2226;
+}
+
+.user-avatar-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #3c8dbc;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.user-panel .info {
+  line-height: 1;
+}
+
+.user-panel .info p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.user-panel .info .status-online {
+  font-size: 11px;
+  color: #b8c7ce;
+}
+
+.text-success {
+  color: #00a65a;
+  font-size: 9px;
+  margin-right: 3px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu .header {
+  padding: 10px 25px 10px 15px;
+  font-size: 12px;
+  color: #4b646f;
+  background: #1a2226;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-menu > li > a {
+  padding: 12px 5px 12px 15px;
+  display: block;
+  border-left: 3px solid transparent;
+  color: #b8c7ce;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu > li > a > i:first-child {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.sidebar-menu > li:hover > a,
+.sidebar-menu > li.active > a {
+  color: #ffffff;
+  background: #1e282c;
+  border-left-color: #3c8dbc;
+}
+
+.pull-right {
+  float: right;
+  margin-top: 3px;
+  transition: transform 0.2s ease;
+}
+
+.rotate-down {
+  transform: rotate(-90deg);
+}
+
+.treeview-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #2c3b41;
+}
+
+.treeview-menu > li > a {
+  padding: 8px 5px 8px 25px;
+  display: block;
+  font-size: 13px;
+  color: #8aa4af;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.treeview-menu > li > a > i {
+  width: 16px;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.treeview-menu > li:hover > a,
+.treeview-menu > li.active > a {
+  color: #ffffff;
+}
+
+/* ============================================================
+   3. CONTENT WRAPPER
+   ============================================================ */
+.content-wrapper {
+  margin-left: 230px;
+  min-height: calc(100vh - 100px);
+  background-color: #ecf0f5;
+  z-index: 800;
+  transition: margin-left 0.3s ease-in-out;
+  flex: 1;
+}
+
+/* ============================================================
+   4. MAIN FOOTER
+   ============================================================ */
+.main-footer {
+  margin-left: 230px;
+  background: #ffffff;
+  padding: 15px;
+  color: #444444;
+  border-top: 1px solid #d2d6de;
+  font-size: 13px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* ============================================================
+   5. COLLAPSED SIDEBAR STATE
+   ============================================================ */
+.sidebar-collapse .main-sidebar {
+  transform: translate(-230px, 0);
+}
+
+.sidebar-collapse .content-wrapper,
+.sidebar-collapse .main-footer {
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .main-sidebar {
+    transform: translate(-230px, 0);
+  }
+  .content-wrapper,
+  .main-footer {
+    margin-left: 0;
+  }
+  .sidebar-collapse .main-sidebar {
+    transform: translate(0, 0);
+  }
+}

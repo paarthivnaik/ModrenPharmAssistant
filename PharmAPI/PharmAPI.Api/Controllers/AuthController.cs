@@ -1,7 +1,9 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PharmAPI.Application.Features.Auth.Commands.ForgotPassword;
 using PharmAPI.Application.Features.Auth.Commands.Login;
+using PharmAPI.Application.Features.Auth.Commands.ResetPassword;
 using PharmAPI.Application.Features.Auth.DTOs;
 
 namespace PharmAPI.Api.Controllers;
@@ -43,4 +45,55 @@ public class AuthController : ApiControllerBase
             return Unauthorized(new { message = "Invalid email or password." });
         }
     }
+
+    /// <summary>
+    /// Initiates self-service password recovery by dispatching a time-limited reset link.
+    /// </summary>
+    /// <param name="command">User registered email address</param>
+    /// <returns>Generic operation confirmation to prevent account enumeration</returns>
+    [HttpPost("forgot-password")]
+    [ProducesResponseType(typeof(ForgotPasswordResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<ForgotPasswordResponseDto>> ForgotPassword([FromBody] ForgotPasswordCommand command)
+    {
+        try
+        {
+            var response = await Mediator.Send(command);
+            return Ok(response);
+        }
+        catch (ValidationException ex)
+        {
+            return BadRequest(new { message = "Validation failed", errors = ex.Errors.Select(e => e.ErrorMessage) });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
+
+    /// <summary>
+    /// Resets the user's password using the cryptographic reset token and invalidates active sessions.
+    /// </summary>
+    /// <param name="command">Reset token, email, and new password</param>
+    /// <returns>Password reset confirmation</returns>
+    [HttpPost("reset-password")]
+    [ProducesResponseType(typeof(ResetPasswordResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<ResetPasswordResponseDto>> ResetPassword([FromBody] ResetPasswordCommand command)
+    {
+        try
+        {
+            var response = await Mediator.Send(command);
+            return Ok(response);
+        }
+        catch (ValidationException ex)
+        {
+            return BadRequest(new { message = "Validation failed", errors = ex.Errors.Select(e => e.ErrorMessage) });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
 }
+

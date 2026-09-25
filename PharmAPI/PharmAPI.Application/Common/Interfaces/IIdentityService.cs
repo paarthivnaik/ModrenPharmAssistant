@@ -12,4 +12,12 @@ public interface IIdentityService
 
     Task<ApplicationUser?> FindByEmailAsync(string email);
     Task<IList<string>> GetRolesAsync(ApplicationUser user);
+
+    Task<string?> GeneratePasswordResetTokenAsync(ApplicationUser user);
+    Task<(bool Success, string? ErrorMessage)> ResetPasswordAsync(
+        string email,
+        string token,
+        string newPassword,
+        CancellationToken cancellationToken = default);
 }
+

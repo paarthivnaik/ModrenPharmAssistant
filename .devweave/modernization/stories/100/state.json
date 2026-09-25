@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.1.0",
+  "storyId": "100",
+  "currentPhase": "PR",
+  "phases": {
+    "INIT": "COMPLETED",
+    "CONTEXT": "COMPLETED",
+    "ANALYZE": "APPROVED",
+    "PLAN": "APPROVED",
+    "BRANCH": "COMPLETED",
+    "IMPLEMENT": "COMPLETED",
+    "VERIFY": "APPROVED",
+    "PR": "COMPLETED"
+  },
+  "branch": {
+    "name": "feature/100-US-SEC-03-Self-Service-Password-Recovery-Email-Reset",
+    "baseBranch": "master",
+    "created": true,
+    "checkedOut": true
+  },
+  "gates": {
+    "GATE_1_ANALYZE_APPROVED": true,
+    "GATE_2_PLAN_APPROVED": true,
+    "GATE_3_VERIFY_APPROVED": true
+  },
+  "status": "COMPLETED",
+  "nextSuggestedPhase": "NONE",
+  "lastUpdated": "2026-09-25T15:19:00Z"
+}

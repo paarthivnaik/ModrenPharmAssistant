@@ -1,0 +1,29 @@
+{
+  "id": "100",
+  "provider": "AzureDevOps",
+  "organization": "https://dev.azure.com/balajinaik",
+  "project": "Skinet",
+  "title": "Step 03 - US-SEC-03: Self-Service Password Recovery & Email Reset",
+  "type": "User Story",
+  "status": "New",
+  "priority": 2,
+  "assignedTo": "BALAJI NAIK MUDAVATU <mvg_naik@outlook.com>",
+  "createdBy": "BALAJI NAIK MUDAVATU <mvg_naik@outlook.com>",
+  "createdDate": "2026-09-23T16:50:21.55Z",
+  "tags": [
+    "PharmAssistant",
+    "Security",
+    "Sprint-1",
+    "Step-03"
+  ],
+  "description": "User Story:\nAs a Registered User,\nI want to request a password reset link sent to my registered email address,\nSo that I can securely recover my account if I forget my password.\n\nLegacy Source: AccountController.cs (ForgotPassword, ResetPassword), SendGrid API",
+  "acceptanceCriteria": [
+    "1. Submitting valid email sends time-limited, single-use cryptographic reset token.",
+    "2. Reset password link validates token expiration (24 hours).",
+    "3. Resetting password updates password hash and revokes prior active sessions.",
+    "4. Email delivery integrated via modern email client."
+  ],
+  "comments": [],
+  "attachments": [],
+  "relations": []
+}

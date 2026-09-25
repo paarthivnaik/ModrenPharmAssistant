@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "storyId": "100",
+  "boundedSlice": {
+    "legacyDependencies": [
+      {
+        "file": "D:/PharmAssistant/PharmAssistant/FYPPharmAssistant/Controllers/Account/AccountController.cs",
+        "symbol": "AccountController.ForgotPassword, AccountController.ResetPassword",
+        "type": "CONTROLLER_ACTION"
+      },
+      {
+        "file": "D:/PharmAssistant/PharmAssistant/FYPPharmAssistant/Models/Account/AccountViewModels.cs",
+        "symbol": "ForgotPasswordViewModel, ResetPasswordViewModel",
+        "type": "VIEW_MODEL"
+      },
+      {
+        "file": "D:/PharmAssistant/PharmAssistant/FYPPharmAssistant/App_Start/IdentityConfig.cs",
+        "symbol": "EmailService, ApplicationUserManager.GeneratePasswordResetTokenAsync",
+        "type": "SERVICE"
+      }
+    ],
+    "targetDependencies": [
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmAPI/PharmAPI.Application/Common/Interfaces/IIdentityService.cs",
+        "role": "Identity abstraction extensions for password reset token generation & verification"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmAPI/PharmAPI.Application/Common/Interfaces/IEmailService.cs",
+        "role": "Decoupled email delivery abstraction"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmAPI/PharmAPI.Infrastructure/Identity/IdentityService.cs",
+        "role": "Concrete implementation of reset token generation and password reset"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmAPI/PharmAPI.Infrastructure/Services/EmailService.cs",
+        "role": "Modern email client integration"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmAPI/PharmAPI.Api/Controllers/AuthController.cs",
+        "role": "REST endpoints for forgot-password and reset-password"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmaUI/src/app/features/auth/forgot-password/forgot-password.component.ts",
+        "role": "Standalone Angular component for requesting password reset"
+      },
+      {
+        "file": "D:/PharmAssistant/ModrenPharmAssistant/PharmaUI/src/app/features/auth/reset-password/reset-password.component.ts",
+        "role": "Standalone Angular component for setting new password with token"
+      }
+    ],
+    "tokenEstimate": 4200
+  }
+}

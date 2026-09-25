@@ -2,7 +2,7 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { LoginRequest, LoginResponse, UserSummary } from '../models/auth.models';
+import { LoginRequest, LoginResponse, UserSummary, ForgotPasswordRequest, ForgotPasswordResponse, ResetPasswordRequest, ResetPasswordResponse } from '../models/auth.models';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,15 @@ export class AuthService {
       })
     );
   }
+
+  forgotPassword(request: ForgotPasswordRequest): Observable<ForgotPasswordResponse> {
+    return this.http.post<ForgotPasswordResponse>(`${this.API_URL}/forgot-password`, request);
+  }
+
+  resetPassword(request: ResetPasswordRequest): Observable<ResetPasswordResponse> {
+    return this.http.post<ResetPasswordResponse>(`${this.API_URL}/reset-password`, request);
+  }
+
 
   logout(): void {
     localStorage.removeItem(this.TOKEN_KEY);
