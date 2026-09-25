@@ -1,0 +1,67 @@
+{
+  "id": "100",
+  "workItemTitle": "Step 03 - US-SEC-03: Self-Service Password Recovery & Email Reset",
+  "mappings": [
+    {
+      "legacyComponent": "FYPPharmAssistant/Controllers/Account/AccountController.cs (ForgotPassword POST)",
+      "targetComponent": "PharmAPI.Api/Controllers/AuthController.cs (POST /api/auth/forgot-password)",
+      "mappingType": "TRANSFORMED_TO",
+      "rationale": "Legacy MVC action transformed into RESTful Web API endpoint initiating ForgotPasswordCommand via MediatR."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Controllers/Account/AccountController.cs (ResetPassword POST)",
+      "targetComponent": "PharmAPI.Api/Controllers/AuthController.cs (POST /api/auth/reset-password)",
+      "mappingType": "TRANSFORMED_TO",
+      "rationale": "Legacy MVC action transformed into RESTful Web API endpoint handling ResetPasswordCommand via MediatR."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Models/Account/AccountViewModels.cs (ForgotPasswordViewModel)",
+      "targetComponent": "PharmAPI.Application/Features/Auth/Commands/ForgotPassword/ForgotPasswordCommand.cs",
+      "mappingType": "SPLIT_INTO",
+      "targetCompanions": [
+        "PharmAPI.Application/Features/Auth/Commands/ForgotPassword/ForgotPasswordCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/ForgotPasswordResponseDto.cs"
+      ],
+      "rationale": "Separated into CQRS Command input, FluentValidation schema, and response DTO."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Models/Account/AccountViewModels.cs (ResetPasswordViewModel)",
+      "targetComponent": "PharmAPI.Application/Features/Auth/Commands/ResetPassword/ResetPasswordCommand.cs",
+      "mappingType": "SPLIT_INTO",
+      "targetCompanions": [
+        "PharmAPI.Application/Features/Auth/Commands/ResetPassword/ResetPasswordCommandValidator.cs",
+        "PharmAPI.Application/Features/Auth/DTOs/ResetPasswordResponseDto.cs"
+      ],
+      "rationale": "Separated into CQRS Command input, FluentValidation schema, and response DTO."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/App_Start/IdentityConfig.cs (EmailService)",
+      "targetComponent": "PharmAPI.Application/Common/Interfaces/IEmailService.cs",
+      "mappingType": "MIGRATED_TO",
+      "targetCompanions": [
+        "PharmAPI.Infrastructure/Services/EmailService.cs"
+      ],
+      "rationale": "Decoupled email sender from ASP.NET Identity pipeline into Clean Architecture infrastructure service."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Views/Account/ForgotPassword.cshtml",
+      "targetComponent": "PharmaUI/src/app/features/auth/forgot-password/forgot-password.component.ts",
+      "mappingType": "REPLACED_BY",
+      "targetCompanions": [
+        "PharmaUI/src/app/features/auth/forgot-password/forgot-password.component.html",
+        "PharmaUI/src/app/features/auth/forgot-password/forgot-password.component.css"
+      ],
+      "rationale": "Razor view replaced with Standalone Angular 22 component."
+    },
+    {
+      "legacyComponent": "FYPPharmAssistant/Views/Account/ResetPassword.cshtml",
+      "targetComponent": "PharmaUI/src/app/features/auth/reset-password/reset-password.component.ts",
+      "mappingType": "REPLACED_BY",
+      "targetCompanions": [
+        "PharmaUI/src/app/features/auth/reset-password/reset-password.component.html",
+        "PharmaUI/src/app/features/auth/reset-password/reset-password.component.css"
+      ],
+      "rationale": "Razor view replaced with Standalone Angular 22 component handling route query params and password update."
+    }
+  ]
+}

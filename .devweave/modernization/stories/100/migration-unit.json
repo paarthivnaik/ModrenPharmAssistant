@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "storyId": "100",
+  "unitName": "Self-Service Password Recovery & Reset",
+  "unitType": "FEATURE",
+  "domain": "Security & Identity",
+  "legacyScope": {
+    "controllers": [
+      "FYPPharmAssistant/Controllers/Account/AccountController.cs (ForgotPassword, ResetPassword actions)"
+    ],
+    "views": [
+      "FYPPharmAssistant/Views/Account/ForgotPassword.cshtml",
+      "FYPPharmAssistant/Views/Account/ForgotPasswordConfirmation.cshtml",
+      "FYPPharmAssistant/Views/Account/ResetPassword.cshtml",
+      "FYPPharmAssistant/Views/Account/ResetPasswordConfirmation.cshtml"
+    ],
+    "models": [
+      "FYPPharmAssistant/Models/Account/AccountViewModels.cs (ForgotPasswordViewModel, ResetPasswordViewModel)"
+    ],
+    "services": [
+      "FYPPharmAssistant/App_Start/IdentityConfig.cs (EmailService, ApplicationUserManager)"
+    ]
+  },
+  "targetScope": {
+    "backend": {
+      "commands": [
+        "ForgotPasswordCommand",
+        "ResetPasswordCommand"
+      ],
+      "validators": [
+        "ForgotPasswordCommandValidator",
+        "ResetPasswordCommandValidator"
+      ],
+      "dtos": [
+        "ForgotPasswordRequestDto",
+        "ForgotPasswordResponseDto",
+        "ResetPasswordRequestDto",
+        "ResetPasswordResponseDto"
+      ],
+      "interfaces": [
+        "IIdentityService (ForgotPasswordAsync, ResetPasswordAsync)",
+        "IEmailService (SendEmailAsync)"
+      ],
+      "controllers": [
+        "PharmAPI.Api/Controllers/AuthController.cs (forgot-password, reset-password endpoints)"
+      ]
+    },
+    "frontend": {
+      "components": [
+        "ForgotPasswordComponent (Standalone)",
+        "ResetPasswordComponent (Standalone)"
+      ],
+      "models": [
+        "ForgotPasswordRequest",
+        "ResetPasswordRequest",
+        "AuthResponse"
+      ],
+      "services": [
+        "AuthService (forgotPassword, resetPassword methods)"
+      ],
+      "routes": [
+        "/forgot-password",
+        "/reset-password"
+      ]
+    }
+  }
+}

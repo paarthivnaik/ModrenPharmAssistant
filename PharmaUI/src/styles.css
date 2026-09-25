@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* Modern PharmAssistant Global Styles (AdminLTE Skin Blue Parity) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ecf0f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #3c8dbc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}

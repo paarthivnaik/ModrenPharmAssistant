@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application.UnitTests\\PharmAPI.Application.UnitTests.csproj": {}
+  },
+  "projects": {
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application.UnitTests\\PharmAPI.Application.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application.UnitTests\\PharmAPI.Application.UnitTests.csproj",
+        "projectName": "PharmAPI.Application.UnitTests",
+        "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application.UnitTests\\PharmAPI.Application.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\BALAJI NAIK MUDAVATU\\.nuget\\packages\\",
+        "outputPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\BALAJI NAIK MUDAVATU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\PharmAPI.Application.csproj": {
+                "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\PharmAPI.Application.csproj"
+              },
+              "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {
+                "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.11.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.21.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\PharmAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\PharmAPI.Application.csproj",
+        "projectName": "PharmAPI.Application",
+        "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\PharmAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\BALAJI NAIK MUDAVATU\\.nuget\\packages\\",
+        "outputPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\BALAJI NAIK MUDAVATU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {
+                "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
+        "projectName": "PharmAPI.Domain",
+        "projectPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\PharmAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\BALAJI NAIK MUDAVATU\\.nuget\\packages\\",
+        "outputPath": "D:\\PharmAssistant\\ModrenPharmAssistant\\PharmAPI\\PharmAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\BALAJI NAIK MUDAVATU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

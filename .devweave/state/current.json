@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "repository": "ModrenPharmAssistant",
+  "initializedAt": "2026-09-25T13:33:00Z",
+  "currentPhase": "INIT",
+  "phases": {
+    "INIT": "COMPLETED",
+    "CONTEXT": "NOT_STARTED",
+    "ANALYZE": "NOT_STARTED",
+    "PLAN": "NOT_STARTED",
+    "BRANCH": "NOT_STARTED",
+    "IMPLEMENT": "NOT_STARTED",
+    "TEST": "NOT_STARTED",
+    "VERIFY": "NOT_STARTED",
+    "REVIEW": "NOT_STARTED",
+    "PR_READY": "NOT_STARTED"
+  },
+  "status": "READY",
+  "activeStoryId": null,
+  "stack": {
+    "topology": "Monorepo / Multi-Service",
+    "backend": "ASP.NET Core 7.0 (Clean Architecture + CQRS)",
+    "frontend": "Angular 22.1.0 SPA (Standalone Components)",
+    "database": "SQLite (EF Core 7.0)",
+    "languages": ["C# 11", "TypeScript 6.0", "HTML5", "CSS3"]
+  }
+}

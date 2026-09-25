@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "storyId": "100",
+  "claims": [
+    {
+      "id": "CLAIM-001",
+      "statement": "Submitting valid email sends time-limited, single-use cryptographic reset token.",
+      "status": "UNVERIFIED",
+      "source": "AcceptanceCriteria",
+      "targetVerification": "Identity password reset token provider + MediatR ForgotPasswordCommand"
+    },
+    {
+      "id": "CLAIM-002",
+      "statement": "Reset password link validates token expiration (24 hours).",
+      "status": "UNVERIFIED",
+      "source": "AcceptanceCriteria",
+      "targetVerification": "DataProtectionTokenProviderOptions.TokenLifespan configured for 24h"
+    },
+    {
+      "id": "CLAIM-003",
+      "statement": "Resetting password updates password hash and revokes prior active sessions.",
+      "status": "UNVERIFIED",
+      "source": "AcceptanceCriteria",
+      "targetVerification": "UserManager.ResetPasswordAsync + UpdateSecurityStampAsync"
+    },
+    {
+      "id": "CLAIM-004",
+      "statement": "Email delivery integrated via modern email client.",
+      "status": "UNVERIFIED",
+      "source": "AcceptanceCriteria",
+      "targetVerification": "IEmailService integration in PharmAPI.Infrastructure"
+    }
+  ],
+  "attachments": [],
+  "ocrFindings": []
+}

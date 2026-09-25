@@ -9,6 +9,7 @@ using PharmAPI.Application.Common.Interfaces;
 using PharmAPI.Domain.Entities;
 using PharmAPI.Infrastructure.Identity;
 using PharmAPI.Infrastructure.Persistence;
+using PharmAPI.Infrastructure.Services;
 
 namespace PharmAPI.Infrastructure;
 
@@ -43,6 +44,12 @@ public static class DependencyInjection
         .AddEntityFrameworkStores<ApplicationDbContext>()
         .AddDefaultTokenProviders();
 
+        // Configure Password Reset Token Lifespan to 24 hours
+        services.Configure<DataProtectionTokenProviderOptions>(opt =>
+        {
+            opt.TokenLifespan = TimeSpan.FromHours(24);
+        });
+
         var secretKey = configuration["JwtSettings:Secret"] ?? "SuperSecretKeyForPharmAssistantModernizationAuth2026!";
         var issuer = configuration["JwtSettings:Issuer"] ?? "PharmAssistantApi";
         var audience = configuration["JwtSettings:Audience"] ?? "PharmAssistantClient";
@@ -71,7 +78,9 @@ public static class DependencyInjection
 
         services.AddScoped<IIdentityService, IdentityService>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<IEmailService, EmailService>();
 
         return services;
     }
 }
+

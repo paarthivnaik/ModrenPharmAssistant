@@ -65,4 +65,35 @@ public class IdentityService : IIdentityService
     {
         return await _userManager.GetRolesAsync(user);
     }
+
+    public async Task<string?> GeneratePasswordResetTokenAsync(ApplicationUser user)
+    {
+        return await _userManager.GeneratePasswordResetTokenAsync(user);
+    }
+
+    public async Task<(bool Success, string? ErrorMessage)> ResetPasswordAsync(
+        string email,
+        string token,
+        string newPassword,
+        CancellationToken cancellationToken = default)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        if (user == null || !user.IsActive)
+        {
+            return (false, "User not found or account is deactivated.");
+        }
+
+        var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
+        if (!result.Succeeded)
+        {
+            var errors = string.Join("; ", result.Errors.Select(e => e.Description));
+            return (false, errors);
+        }
+
+        // Revoke prior active sessions by rotating the security stamp
+        await _userManager.UpdateSecurityStampAsync(user);
+
+        return (true, null);
+    }
 }
+
